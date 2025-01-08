@@ -174,11 +174,10 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 mix ewallet">
                         <div class="featured__item border rounded p-4">
                             <div class="featured__item__text">
-                                <h6><a href="#">{{ $item->name }}</a></h6>
-                                <h6><a href="#" style="font-weight: 600; color:#7fad39">{{ $item->service }}</a></h6>
+                                <h6><a href="#" style="font-weight: 600; color:#7fad39">{{ $item->Nominal }}</a></h6>
                                 <h5>Rp. {{ number_format($item->price, 0, ',', '.') }}</h5>
                                 <div class="row flex justify-content-center mt-4">
-                                    <a href="#" class="primary-btn">Beli Sekarang</a>
+                                    <a href="https://wa.me/6282334304008?text=halo aku mau beli ini" class="primary-btn">Beli Sekarang</a>
                                 </div>
                             </div>
                         </div>
@@ -193,7 +192,7 @@
                                 <h6><a href="#" style="font-weight: 600; color:#7fad39">{{ $item->service }}</a></h6>
                                 <h5>Rp. {{ number_format($item->price, 0, ',', '.') }}</h5>
                                 <div class="row flex justify-content-center mt-4">
-                                    <a href="#" class="primary-btn">Beli Sekarang</a>
+                                    <a href="https://wa.me/6282334304008?text=halo aku mau beli ini" class="primary-btn">Beli Sekarang</a>
                                 </div>
                             </div>
                         </div>
@@ -208,7 +207,7 @@
                                 <h6><a href="#" style="font-weight: 600; color:#7fad39">{{ $item->service }}</a></h6>
                                 <h5>Rp. {{ number_format($item->price, 0, ',', '.') }}</h5>
                                 <div class="row flex justify-content-center mt-4">
-                                    <a href="#" class="primary-btn">Beli Sekarang</a>
+                                    <a href="https://wa.me/6282334304008?text=halo aku mau beli ini" class="primary-btn">Beli Sekarang</a>
                                 </div>
                             </div>
                         </div>
