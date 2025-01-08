@@ -47,8 +47,6 @@
                     <nav class="header__menu">
                         <ul>
                             <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -165,7 +163,7 @@
                                 <h6><a href="#" style="font-weight: 600; color:#7fad39">{{ $item->service }}</a></h6>
                                 <h5>Rp. {{ number_format($item->price, 0, ',', '.') }}</h5>
                                 <div class="row flex justify-content-center mt-4">
-                                    <a href="#" class="primary-btn">Beli Sekarang</a>
+                                    <a href="https://wa.me/6282334304008?text=halo aku mau beli ini" class="primary-btn">Beli Sekarang</a>
                                 </div>
                             </div>
                         </div>
