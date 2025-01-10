@@ -28,13 +28,17 @@ class EMoneyResource extends Resource
             ->schema([
                 TextInput::make('name')->string(),
                 Select::make('service')->string()->options([
-                    'Flazz' => 'Flazz',
-                    'Mandiri E-Money' => 'Mandiri E-Money',
-                    'Brizzi' => 'Brizzi',
+                    'Dana' => 'Dana',
+                    'ShopeePay' => 'ShopeePay',
+                    'Ovo' => 'Ovo',
+                    'Gopay' => 'Gopay',
                     'TapCash' => 'TapCash',
-                    'Jakcard' => 'Jakcard',
                 ])->placeholder("select e-money"),
                 TextInput::make('price')->integer(),
+                Select::make('status')->string()->options([
+                    'Tersedia' => 'Tersedia',
+                    'Tidak Tersedia' => 'Tidak Tersedia',
+                ])->placeholder("select status"),
             ]);
     }
 
@@ -44,14 +48,14 @@ class EMoneyResource extends Resource
             ->columns([
                 TextColumn::make('name'),
                 TextColumn::make('service'),
-                TextColumn::make('price')->sortable(),
+                TextColumn::make('price'),
+                TextColumn::make('status')->sortable(),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

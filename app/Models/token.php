@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class token extends Model
 {
     protected $table = "token";
-    protected $fillable = ['Nominal', 'price'];
+    protected $fillable = ['Nominal', 'price', 'status'];
 }

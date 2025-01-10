@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string("Nominal");
             $table->integer("price");
+            $table->string("status");
             $table->timestamps();
         });
     }

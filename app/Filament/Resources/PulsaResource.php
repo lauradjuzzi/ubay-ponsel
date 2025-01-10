@@ -35,6 +35,10 @@ class PulsaResource extends Resource
                     'XL' => 'XL',
                 ])->placeholder("select provider"),
                 TextInput::make('price')->integer(),
+                Select::make('status')->string()->options([
+                    'Tersedia' => 'Tersedia',
+                    'Tidak Tersedia' => 'Tidak Tersedia',
+                ])->placeholder("select status"),
             ]);
     }
 
@@ -44,14 +48,14 @@ class PulsaResource extends Resource
             ->columns([
                 TextColumn::make('name'),
                 TextColumn::make('service'),
-                TextColumn::make('price')->sortable(),
+                TextColumn::make('price'),
+                TextColumn::make('status')->sortable(),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

@@ -36,6 +36,10 @@ class TokenResource extends Resource
                     'Rp. 500.000' => 'Rp. 500.000',
                 ])->placeholder("select nominal"),
                 TextInput::make('price')->integer(),
+                Select::make('status')->string()->options([
+                    'Tersedia' => 'Tersedia',
+                    'Tidak Tersedia' => 'Tidak Tersedia',
+                ])->placeholder("select status"),
             ]);
     }
 
@@ -44,14 +48,14 @@ class TokenResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('Nominal'),
-                TextColumn::make('price')->sortable(),
+                TextColumn::make('price'),
+                TextColumn::make('status')->sortable(),
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
+                Tables\Actions\EditAction::make()
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
